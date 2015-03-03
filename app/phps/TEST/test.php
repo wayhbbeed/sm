@@ -6,3 +6,5 @@ $connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" . realpath("bookinfo
 $conn->Open($connstr);
 
 echo "this is for git";
+
+echo "this is git for win";
