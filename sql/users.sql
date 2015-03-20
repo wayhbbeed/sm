@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50538
 File Encoding         : 65001
 
-Date: 2015-01-15 17:37:01
+Date: 2015-03-20 17:15:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,12 +27,12 @@ CREATE TABLE `users` (
   `info` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '吴丽霞', '111', '1', '');
+INSERT INTO `users` VALUES ('1', '吴丽霞', '111', '0', '客服人员');
 INSERT INTO `users` VALUES ('2', '王程', '111', '1', null);
 INSERT INTO `users` VALUES ('3', '温永生', '111', '1', null);
 INSERT INTO `users` VALUES ('4', '高洁', '111', '1', null);
@@ -42,3 +42,7 @@ INSERT INTO `users` VALUES ('7', '王英', '111', '1', null);
 INSERT INTO `users` VALUES ('8', '王春丽', '111', '1', null);
 INSERT INTO `users` VALUES ('9', '廖家兰', '111', '1', null);
 INSERT INTO `users` VALUES ('10', '范丽', '111', '0', null);
+INSERT INTO `users` VALUES ('17', '32423423', '', '0', null);
+INSERT INTO `users` VALUES ('18', '唔小心', '11', '1', null);
+INSERT INTO `users` VALUES ('19', '孟大姐', '', '0', null);
+INSERT INTO `users` VALUES ('20', '<', '', '0', null);

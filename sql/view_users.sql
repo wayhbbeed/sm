@@ -1,0 +1,14 @@
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (1, '吴丽霞', '业务部门', 0, '客服人员', '客服', '客服人员，负责与客户沟通', 0);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (2, '王程', NULL, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (3, '温永生', NULL, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (4, '高洁', NULL, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (5, '吴春荣', NULL, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (6, '向巧丽', NULL, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (7, '王英', NULL, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (8, '王春丽', NULL, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (9, '廖家兰', NULL, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (10, '范丽', NULL, 0, NULL, NULL, NULL, NULL);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (17, '32423423', NULL, 0, NULL, NULL, NULL, NULL);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (18, '唔小心', NULL, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (19, '孟大姐', NULL, 0, NULL, NULL, NULL, NULL);
+INSERT INTO `view_users` (`id`, `username`, `name`, `live`, `info`, `position`, `roleinfo`, `rolelive`) VALUES (20, '<', NULL, 0, NULL, NULL, NULL, NULL);

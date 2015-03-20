@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-03-19 17:13:39
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-03-20 17:08:16
          compiled from "D:\WWW\sm\app\templates\pages\sys_users_add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9591550a93430b71b3-97993757%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:12942550be38053ec67-23419966%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd30fd17e47261d3e613b279fb7f666a651fee087' => 
     array (
       0 => 'D:\\WWW\\sm\\app\\templates\\pages\\sys_users_add.tpl',
-      1 => 1426666398,
+      1 => 1426756474,
       2 => 'file',
     ),
     '4386575760d87c0c385dce3e5a6a2a9050d83443' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9591550a93430b71b3-97993757',
+  'nocache_hash' => '12942550be38053ec67-23419966',
   'function' => 
   array (
   ),
@@ -30,9 +30,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_550a93431ab3f9_80426175',
+  'unifunc' => 'content_550be3806acfc4_84325595',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_550a93431ab3f9_80426175')) {function content_550a93431ab3f9_80426175($_smarty_tpl) {?><?php  $_config = new Smarty_Internal_Config("config_tpl.conf", $_smarty_tpl->smarty, $_smarty_tpl);$_config->loadConfigVars(null, 'local'); ?>
+<?php if ($_valid && !is_callable('content_550be3806acfc4_84325595')) {function content_550be3806acfc4_84325595($_smarty_tpl) {?><?php  $_config = new Smarty_Internal_Config("config_tpl.conf", $_smarty_tpl->smarty, $_smarty_tpl);$_config->loadConfigVars(null, 'local'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,6 +153,13 @@ $_smarty_tpl->tpl_vars['m']->_loop = true;
 
 				<div class="control-group">
 					<label class="control-label" >状态</label>
+					<div class="controls">
+						<input type="text" name="live" />
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" >所属角色</label>
 					<div class="controls">
 						<input type="text" name="live" />
 					</div>

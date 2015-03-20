@@ -1,0 +1,15 @@
+SELECT
+u.id,
+u.username,
+r.`name`,
+u.live,
+u.info,
+r.position,
+r.info AS roleinfo,
+r.live AS rolelive
+FROM
+users AS u
+LEFT JOIN users_role AS ur ON ur.users_id = u.id
+LEFT JOIN role AS r ON ur.role_id = r.id
+ORDER BY
+u.id ASC 
