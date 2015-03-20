@@ -111,7 +111,7 @@ try{
             }  
 }
 
-//添加
+//更新
 function update($sql,$values){
 try{
             $dbh=con();

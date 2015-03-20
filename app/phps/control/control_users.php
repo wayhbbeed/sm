@@ -94,7 +94,7 @@ break;
  */
 //查询所有用户
 case "allusers":
-		$allusers=dao_users::getall("users");
+		$allusers=dao_users::getall("view_users");
 		$active="sys_users";
         $content_header="用户管理";
         $smarty->assign('active',$active);

@@ -32,6 +32,13 @@
 						<input type="text" name="live" />
 					</div>
 				</div>
+
+				<div class="control-group">
+					<label class="control-label" >所属角色</label>
+					<div class="controls">
+						<input type="text" name="live" />
+					</div>
+				</div>
 				
 				<div class="form-actions">
 					<input type="submit" value="保存" class="btn btn-primary"/>

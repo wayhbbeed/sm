@@ -1,10 +1,8 @@
 <?php
-require "./adodb.inc.php";
-$conn = new com("ADODB.Connection");
-$connstr = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" . realpath("bookinfo.mdb ");
+require_once '../sm.inc.php';
+$mod=dao_users::getall('users');
 
-$conn->Open($connstr);
+echo "<pre>";
+var_dump($mod);
 
-echo "this is for git";
-
-echo "this is git for win";
+// echo "string";

@@ -2,10 +2,8 @@
 {block name=content}
 <!--{*按钮*}-->
 <div class="btn-group" id="sys_tog">
-     <a class="btn tip-bottom" title="查询全部任务" href="../control/control_users.php?uid=allusers" >查询</a>	
-</div>
-<div class="btn-group">
-    <a class="btn tip-bottom" title="查询全部任务" href="../view/sys_users_add.php" >增加</a>
+     <a class="btn tip-bottom " title="查询全部任务" href="../control/control_users.php?uid=allusers" >查询</a>	
+     <a class="btn tip-bottom " title="查询全部任务" href="../view/sys_users_add.php" >增加</a>
 </div>
 
 <!--表格-->
@@ -25,7 +23,8 @@
 				<th>ID</th>
 				<th>用户名</th>
 				<th>密码</th>
-				<th>所属组</th>
+				<th>所属部门</th>
+				<th>职位</th>
 				<th>状态</th>
 				<th>操作</th>
 			</tr>
@@ -37,7 +36,8 @@
 				<td>{$a.id}</td>
 				<td>{$a.username}</td>
 				<td>******</td>
-				<td>.</td>
+				<td>{$a.name}</td>
+				<td>{$a.position}</td>
 				{if $a.live eq 1}
 				<td><a href="../control/control_users.php?uid=changlive&id={$a.id}&live=1"><span class="label label-success">启用</span></a></td>
 				{else}

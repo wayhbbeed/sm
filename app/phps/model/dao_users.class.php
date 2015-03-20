@@ -25,7 +25,7 @@ class dao_users extends db{
       		$sql="SELECT "
 				 ."perm.id,perm.pid,perm.type,perm.info,perm.name,perm.url,perm.title,perm.icon "
 				 ."FROM "
-				 ."users "
+				 ."users " 
 				 ."INNER JOIN users_role ON users_role.users_id = users.id "
 				 ."INNER JOIN role ON users_role.role_id = role.id "
 				 ."INNER JOIN role_perm ON role_perm.role_id = role.id "
@@ -78,17 +78,16 @@ class dao_users extends db{
 				 ."users "
 				 ."INNER JOIN users_role ON users_role.users_id = users.id "
 				 ."INNER JOIN role ON users_role.role_id = role.id "
-				 ."INNER JOIN role_perm ON role_perm.role_id = role.id "
-				 ."INNER JOIN perm ON role_perm.perm_id = perm.id "
 				 ."WHERE users.username = ? ";
 			$values=array($username);
 			$group=parent::select_single($sql,$values);
 			return $group;
       }
-      //通用获取权限方法
+      //通用获取权限方法(所有内容)
       public static function getperm($username='',$type=0){
           $sql="SELECT "
          ."perm.id,perm.pid,perm.type,perm.info,perm.name,perm.url,perm.title,perm.icon "
+         .",role.name rolename,role.position "
          ."FROM "
          ."users "
          ."INNER JOIN users_role ON users_role.users_id = users.id "
@@ -101,6 +100,22 @@ class dao_users extends db{
           $mod=parent::select_query($sql,$values);
           return $mod;
       }
+       //通用获取权限方法(指定内容)
+      public static function getperms($data,$username='',$type=0){
+          $sql="SELECT "
+         .$data 
+         ." FROM "
+         ." users "
+         ." INNER JOIN users_role ON users_role.users_id = users.id "
+         ." INNER JOIN role ON users_role.role_id = role.id "
+         ." INNER JOIN role_perm ON role_perm.role_id = role.id "
+         ." INNER JOIN perm ON role_perm.perm_id = perm.id "
+         ." WHERE users.username like CONCAT(?,'%') "
+         ." AND (perm.type like CONCAT(?,'%')) ";     
+          $values=array($username,$type);
+          $mod=parent::select_query($sql,$values);
+          return $mod;
+      }
       /**
        * 
        +系统模块公用
@@ -108,13 +123,13 @@ class dao_users extends db{
       //更新状态
       public static function changlive($table,$live,$id){
       	    $sql="UPDATE ".$table." SET live = ? WHERE id=?";
-			$values=array($live,$id);
+			      $values=array($live,$id);
 			return parent::update($sql,$values);
       }
        //查询所有
       public static function getall($table){
       		$sql="SELECT * FROM  ".$table;
-			$values=array();
+			    $values=array();
 			return parent::select_query($sql,$values);
       }
 
