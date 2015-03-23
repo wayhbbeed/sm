@@ -132,6 +132,26 @@ class dao_users extends db{
 			    $values=array();
 			return parent::select_query($sql,$values);
       }
+      //通用查询方法
+      public static function select($filed,$table,$con=""){
+          if (is_array($filed)) {
+              $data="";
+              foreach ($filed as $key => $value) {
+                 $data.=$value;
+                 $data.=",";
+              }
+              // $check=$checkusers?$checkusers:0;
+              $cons=$con?$con:"";
+              $sql=" SELECT ".rtrim($data, ",")." FROM  ".$table." ".$cons;
+              // echo $sql.'<br>';
+              $values=array();
+              return parent::select_query($sql,$values);
+          } else {
+              throw new Exception('filed is NOT ARRAY()'); 
+              return false;
+          }
+   
+      }
 
       /**
         * 

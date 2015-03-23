@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-03-20 17:08:16
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-03-23 17:04:05
          compiled from "D:\WWW\sm\app\templates\pages\sys_users_add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12942550be38053ec67-23419966%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:4215550fd7050f4241-99136311%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd30fd17e47261d3e613b279fb7f666a651fee087' => 
     array (
       0 => 'D:\\WWW\\sm\\app\\templates\\pages\\sys_users_add.tpl',
-      1 => 1426756474,
+      1 => 1427101407,
       2 => 'file',
     ),
     '4386575760d87c0c385dce3e5a6a2a9050d83443' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12942550be38053ec67-23419966',
+  'nocache_hash' => '4215550fd7050f4241-99136311',
   'function' => 
   array (
   ),
@@ -30,9 +30,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_550be3806acfc4_84325595',
+  'unifunc' => 'content_550fd70529f634_70172630',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_550be3806acfc4_84325595')) {function content_550be3806acfc4_84325595($_smarty_tpl) {?><?php  $_config = new Smarty_Internal_Config("config_tpl.conf", $_smarty_tpl->smarty, $_smarty_tpl);$_config->loadConfigVars(null, 'local'); ?>
+<?php if ($_valid && !is_callable('content_550fd70529f634_70172630')) {function content_550fd70529f634_70172630($_smarty_tpl) {?><?php  $_config = new Smarty_Internal_Config("config_tpl.conf", $_smarty_tpl->smarty, $_smarty_tpl);$_config->loadConfigVars(null, 'local'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,31 +140,44 @@ $_smarty_tpl->tpl_vars['m']->_loop = true;
 				 <div class="control-group">
 					<label class="control-label" >用户名</label>
 				    <div class="controls">
-						<input type="text" name="username"  />
+						<input type="text" name="username"  required/>
 					</div>
 				</div>
 				
 				<div class="control-group">
 					<label class="control-label" >密码</label>
 					<div class="controls">
-						<input type="text" name="password" />
+						<input type="password" name="password" required/>
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label class="control-label" >状态</label>
 					<div class="controls">
-						<input type="text" name="live" />
+						<select style="width:150px;"  name="egroup" required>
+						    <option />1
+							<option />0
+						</select>
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label class="control-label" >所属角色</label>
 					<div class="controls">
-						<input type="text" name="live" />
+						<select style="width:150px;"  name="egroup" required>
+							<?php  $_smarty_tpl->tpl_vars['d'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['d']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['data']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['d']->key => $_smarty_tpl->tpl_vars['d']->value) {
+$_smarty_tpl->tpl_vars['d']->_loop = true;
+?>
+						    	<option /><?php echo $_smarty_tpl->tpl_vars['d']->value['name'];?>
+(<?php echo $_smarty_tpl->tpl_vars['d']->value['position'];?>
+)
+						    <?php } ?>
+						</select>
 					</div>
 				</div>
-				
+
 				<div class="form-actions">
 					<input type="submit" value="保存" class="btn btn-primary"/>
 					<input type="reset" value="取消" class="btn btn-danger" />
@@ -210,6 +223,10 @@ $_smarty_tpl->tpl_vars['m']->_loop = true;
  src="../public/js/unicorn.js"><?php echo '</script'; ?>
 >
 
+
+<?php echo '<script'; ?>
+ src="../public/js/unicorn.form_common.js"><?php echo '</script'; ?>
+>
 
 <?php echo '<script'; ?>
  language="javascript" >

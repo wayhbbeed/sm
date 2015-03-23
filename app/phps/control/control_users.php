@@ -105,15 +105,17 @@ break;
 
 //添加用户
 case "addusers":
-		$username=$_REQUEST['username'];
-		$password=$_REQUEST['password'];
-		$live=$_REQUEST['live'];
-		
+		$username=$_POST['username'];
+		$password=$_POST['password'];
+		$live=$_POST['live'];
+		$role=$_POST['role'];
+		// echo $role;die();
 		$checkusers=dao_users::checkusers($username);
 		$check=$checkusers?$checkusers:0;
 		// echo $check;
 		if ($check===0) {
 			$afteradd=dao_users::adduser($username,$password,$live);
+			// echo $afteradd;die();
 			//进行跳转
 			SUCCESS_COM($smarty,'../view/sys_users_add.php');
 		} else {

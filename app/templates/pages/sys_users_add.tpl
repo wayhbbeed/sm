@@ -15,31 +15,38 @@
 				 <div class="control-group">
 					<label class="control-label" >用户名</label>
 				    <div class="controls">
-						<input type="text" name="username"  />
+						<input type="text" name="username"  required/>
 					</div>
 				</div>
 				
 				<div class="control-group">
 					<label class="control-label" >密码</label>
 					<div class="controls">
-						<input type="text" name="password" />
+						<input type="password" name="password" required/>
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label class="control-label" >状态</label>
 					<div class="controls">
-						<input type="text" name="live" />
+						<select style="width:150px;"  name="egroup" required>
+						    <option />1
+							<option />0
+						</select>
 					</div>
 				</div>
 
 				<div class="control-group">
 					<label class="control-label" >所属角色</label>
 					<div class="controls">
-						<input type="text" name="live" />
+						<select style="width:150px;"  name="egroup" required>
+							{foreach $data as $d}
+						    	<option />{$d.name}({$d.position})
+						    {/foreach}
+						</select>
 					</div>
 				</div>
-				
+
 				<div class="form-actions">
 					<input type="submit" value="保存" class="btn btn-primary"/>
 					<input type="reset" value="取消" class="btn btn-danger" />
@@ -50,4 +57,7 @@
 	</div>
 	</div>			
 </div>
+{/block}
+{block name=footer_js}
+<script src="../public/js/unicorn.form_common.js"></script>
 {/block}
